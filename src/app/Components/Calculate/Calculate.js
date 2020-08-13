@@ -63,7 +63,7 @@ handleCount = event => {
             </div>
             
                <h3>
-            <NavLink to='/Home' className='link'style={{color:'white'}}>回到主页</NavLink>
+            <NavLink to='/Home' className='link' style={{color:'white'}}>回到主页</NavLink>
             </h3>
             <Route path='/Home' component={Myhome}  /> 
             </Router>

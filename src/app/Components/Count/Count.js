@@ -1,5 +1,6 @@
 import React from 'react';
 import './Count.less';
+import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
 
 class Count extends React.Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class Count extends React.Component {
 
     render() {
         return <div className='Count'>
+            <Router>
             <h1>在线倒计时器</h1>
             <div>
                 <label>设置时间</label>
@@ -24,6 +26,12 @@ class Count extends React.Component {
             <div className='show'>
                 <input type='text' readOnly={true} value={this.state.time}></input>
             </div>
+
+            {/* <h3>
+            <NavLink to='/Home' className='link' style={{color:'white'}}>回到主页</NavLink>
+            </h3>
+            <Route path='/Home' component={Myhome}  />  */}
+            </Router>
             
         </div>
     }
