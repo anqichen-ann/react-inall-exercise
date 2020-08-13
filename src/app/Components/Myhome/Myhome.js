@@ -1,18 +1,15 @@
 import React from 'react';
 import './Myhome.less';
-import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
-import Calculate from '../../Components/Calculate/Calculate';
-import Count from '../../Components/Count/Count';
+import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
 
 const Myhome = () => {
   return (<div className="Myhome">
-    <Router>
     <div className='select'>
       <img src={require('../../../images/hero-image.png')} className='hero'/>
-
+      <h1>在线实用工具</h1>
       <div className='choice'>
       <ul>
         <li>
@@ -26,12 +23,6 @@ const Myhome = () => {
       </ul>
       </div>
     </div>
-    <Switch>
-            <Route path='/Calculete' component={Calculate}  />
-            <Route path='/Count' component={Count}  />
-    </Switch>
-    </Router>
-    
 
   </div>);
 };

@@ -4,8 +4,6 @@ import {BrowserRouter as Router, Route, NavLink, Switch, Redirect} from 'react-r
 import Calculate from './Components/Calculate/Calculate';
 import Count from './Components/Count/Count';
 import Myhome from './Components/Myhome/Myhome';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 
 
 const Home = () => {
@@ -13,7 +11,7 @@ const Home = () => {
     <Router>
     <ul>
         <li>
-          <NavLink to='/Home' className='link' style={{color:'white'}}>Home</NavLink>
+          <NavLink to='/' className='link' style={{color:'white'}}>Home</NavLink>
         </li>
         <li>
           <NavLink to='/Calculete' className='link' style={{color:'white'}}>在线计算器</NavLink>
@@ -23,7 +21,7 @@ const Home = () => {
         </li>
     </ul>
     <Switch>            
-            <Route path='/Home' component={Myhome}  />
+            <Route exact path='/' component={Myhome}  />
             <Route path='/Calculete' component={Calculate}  />
             <Route path='/Count' component={Count}  />
     </Switch>
